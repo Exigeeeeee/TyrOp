@@ -1,0 +1,34 @@
+﻿<Window x:Class="TyrOp.WINDOWPAGE.AddOrder"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TyrOp.WINDOWPAGE"
+        mc:Ignorable="d"
+        Title="AddOrder" Height="450" Width="800" Icon="/Resources/icon.ico">
+    <Window.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Color="#1976D2" Offset="0" />
+            <GradientStop Color="#0D47A1" Offset="1" />
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid>
+            
+            <StackPanel>
+            <TextBlock Text="Клиент" FontWeight="Bold" Margin="10" />
+            <ComboBox x:Name="ClientComboBox" FontWeight="Bold" DisplayMemberPath="FullName" SelectedValuePath="ClientId" Margin="10" />
+
+            <TextBlock Text="Тур" FontWeight="Bold" Margin="10" />
+            <ComboBox x:Name="TourComboBox" FontWeight="Bold" DisplayMemberPath="TourName" SelectedValuePath="TourId" Margin="10" />
+
+            <TextBlock Text="Статус" FontWeight="Bold" Margin="10" />
+            <ComboBox x:Name="StatusComboBox" FontWeight="Bold" DisplayMemberPath="StatusName" SelectedValuePath="id" Margin="10" />
+
+            <TextBlock Text="Дата заказа" FontWeight="Bold" Margin="10" />
+            <DatePicker x:Name="OrderDatePicker" FontWeight="Bold" Margin="10" />
+
+            <Button Content="Сохранить" Width="100" FontWeight="Bold" Margin="10"  Style="{StaticResource MenuButtonStyle}" HorizontalAlignment="Right" Click="SaveButton_Click" />
+            </StackPanel>
+        </Grid>
+    
+</Window>

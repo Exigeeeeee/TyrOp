@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c7a6f4bbff67428a9fa63eb6f86c56e7" Name="Diagram1" ZoomLevel="105">
+        <EntityTypeShape EntityType="TourOperatorDBModel.Clients" Width="1.5" PointX="10.375" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="TourOperatorDBModel.Hotels" Width="1.5" PointX="7.5" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TourOperatorDBModel.Orders" Width="1.5" PointX="10.5" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TourOperatorDBModel.Programs" Width="1.5" PointX="3.25" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="TourOperatorDBModel.Roles" Width="1.5" PointX="0.75" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TourOperatorDBModel.Status" Width="1.5" PointX="8.25" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="TourOperatorDBModel.Tickets" Width="1.5" PointX="7.625" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TourOperatorDBModel.Tours" Width="1.5" PointX="5.25" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TourOperatorDBModel.Users" Width="1.5" PointX="3" PointY="7.125" IsExpanded="true" />
+        <AssociationConnector Association="TourOperatorDBModel.FK__Orders__ClientId__4E88ABD4" ManuallyRouted="false" />
+        <AssociationConnector Association="TourOperatorDBModel.FK__Hotels__TourId__440B1D61" ManuallyRouted="false" />
+        <AssociationConnector Association="TourOperatorDBModel.FK__Orders__StatusID__5070F446" ManuallyRouted="false" />
+        <AssociationConnector Association="TourOperatorDBModel.FK__Orders__TourId__4F7CD00D" ManuallyRouted="false" />
+        <AssociationConnector Association="TourOperatorDBModel.FK__Programs__TourId__49C3F6B7" ManuallyRouted="false" />
+        <AssociationConnector Association="TourOperatorDBModel.FK__Users__RoleId__3E52440B" ManuallyRouted="false" />
+        <AssociationConnector Association="TourOperatorDBModel.FK__Tickets__TourId__46E78A0C" ManuallyRouted="false" />
+        <AssociationConnector Association="TourOperatorDBModel.FK__Tours__Responsib__412EB0B6" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

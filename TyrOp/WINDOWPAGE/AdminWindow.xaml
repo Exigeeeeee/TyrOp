@@ -1,0 +1,52 @@
+﻿<Window x:Class="TyrOp.WINDOWPAGE.AdminWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TyrOp.WINDOWPAGE"
+        mc:Ignorable="d"
+         Title="Панель администратора" Height="600" Width="1130" Icon="\Resources\icon.ico" WindowStartupLocation="CenterScreen" ResizeMode="CanResize">
+    <Window.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Color="#1976D2" Offset="0" />
+            <GradientStop Color="#0D47A1" Offset="1" />
+        </LinearGradientBrush>
+    </Window.Background>
+
+    <Grid>
+        <!-- Верхняя панель -->
+        <Border Background="#0D47A1" Height="60" VerticalAlignment="Top">
+            <DockPanel>
+                <TextBlock Text="Панель администратора" Foreground="White" FontSize="20" FontWeight="Bold"
+                           VerticalAlignment="Center" Margin="20,0,0,0" DockPanel.Dock="Left" />
+                <Button Content="Выход" FontWeight="Bold" Width="100" Height="40" Margin="10" Foreground="White" 
+                        Background="#E53935" BorderThickness="0" HorizontalAlignment="Right"
+                        VerticalAlignment="Center" DockPanel.Dock="Right" Click="ExitButton_Click" />
+            </DockPanel>
+        </Border>
+
+        <!-- Основное содержимое -->
+        <Grid Margin="20,80,20,20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="3*" />
+            </Grid.ColumnDefinitions>
+
+            <!-- Левое меню -->
+            <Border Background="#FFFFFF" Margin="5,0" Grid.Column="0" CornerRadius="10">
+                <StackPanel>
+                    <Button Content="Управление пользователями" FontWeight="Bold" Style="{StaticResource MenuButtonStyle}" Click="ManageUsersButton_Click" />
+                    <Button Content="Управление турами" FontWeight="Bold" Style="{StaticResource MenuButtonStyle}" Click="ManageToursButton_Click" />
+                    <Button Content="Управление заказами" FontWeight="Bold" Style="{StaticResource MenuButtonStyle}" Click="ManageOrdersButton_Click" />
+                </StackPanel>
+            </Border>
+
+            <!-- Правая часть -->
+            <Border Background="White" Grid.Column="1" CornerRadius="10">
+
+                <Frame Name="HomeFrame" Margin="0,5,0,0" Grid.Row="1"/>
+            </Border>
+
+        </Grid>
+    </Grid>
+</Window>

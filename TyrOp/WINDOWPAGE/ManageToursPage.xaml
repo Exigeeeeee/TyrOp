@@ -1,0 +1,44 @@
+﻿<Page x:Class="TyrOp.WINDOWPAGE.ManageToursPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TyrOp.WINDOWPAGE"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+       Title="Управление турами">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <!-- Список туров -->
+        <DataGrid x:Name="ToursDataGrid" FontWeight="Bold" AutoGenerateColumns="False" CanUserAddRows="False" 
+                  IsReadOnly="True" Margin="0,0,0,10">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding TourId}" Width="50" />
+                <DataGridTextColumn Header="Название тура" Binding="{Binding TourName}" Width="*" />
+                <DataGridTextColumn Header="Описание" Binding="{Binding Description}" Width="*" />
+                <DataGridTextColumn Header="Статус" Binding="{Binding Status}" Width="150" />
+                <DataGridTextColumn Header="Дата начала" Binding="{Binding StartDate}" Width="150" />
+                <DataGridTextColumn Header="Дата окончания" Binding="{Binding EndDate}" Width="150" />
+                <DataGridTemplateColumn Header="Изображение" Width="150">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Image Source="{Binding ImagePath}" Height="100" Width="100" Stretch="UniformToFill"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+            
+        </DataGrid>
+
+        <!-- Кнопки управления -->
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Grid.Row="1" Margin="0,10,0,0">
+            <Button Content="Добавить" FontWeight="Bold" Width="100" Height="40" Margin="10" Style="{StaticResource MenuButtonStyle}" Click="AddTourButton_Click" />
+            <Button Content="Изменить" FontWeight="Bold" Width="100" Height="40" Margin="10" Style="{StaticResource MenuButtonStyle}" Click="EditTourButton_Click" />
+            <Button Content="Удалить" FontWeight="Bold" Width="100" Height="40" Margin="10" Style="{StaticResource MenuButtonStyle}" Click="DeleteTourButton_Click" />
+        </StackPanel>
+    </Grid>
+</Page>
